@@ -1,0 +1,62 @@
+/* ------------------------------
+		Dark
+------------------------------ */
+body.dark {
+    background-color: $base-dark;
+    color: $eee;
+   .about-info .social-icons li i,
+   .contact-item .social-icons li i{
+       color: $eee;
+   }
+
+    h1, h2, h3, h4,h5, h6,
+    .section-title,
+    .about-info ul li span,
+    .contact-item p:first-child,
+    .main-menu .menu li a {
+        color:$white-color;
+    }
+
+
+    .testimonials-item,
+    .service-item,
+    .pricing-item,
+    .pricing-item:after,
+    .pricing-item .content .price,
+    .timeline ,
+    .skill-item .skill-progress,
+    .blog-item,
+    .blog-single,
+    .widget,
+    .form ,
+    .about-box,
+    .main-menu .menu,
+    .contact-item,
+    .contact_form{
+        background-color: $bg-dark;
+        box-shadow: none;
+    }
+    .service-item .icon{
+       border:8px solid $base-dark;
+    }
+    .section-sub-title:before{
+         border:4px solid $base-dark;
+    }
+    .blog-single .footer-author,
+    .blog-single .quote, 
+    .widget-search .search-form .form-control,
+    .widget-tags li,.loading {
+        background-color: $base-dark;
+    }
+    .widget-search .search-form .form-control,
+    .form .form-control{
+        border: 1px solid $base-dark;
+    }
+    .about-box h2{
+        color:$base-color;
+    }
+    .contact_form .form-control,.google-map{
+        border:1px solid  rgba($white-color, 0.1);
+    }
+   
+}

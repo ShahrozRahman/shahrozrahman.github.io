@@ -1,0 +1,177 @@
+/* ------------------------------
+		About
+------------------------------ */
+.about{
+	&-hero{
+        margin-bottom: 30px;
+        img{
+            background-color: $eee; 
+            border-radius:5px; 
+            @include shadow();
+        }
+	}
+	&-info{
+        margin-bottom:30px;
+        position: relative;
+		h5{
+			margin-bottom:20px;
+        }
+        .g-listes{
+            display: flex;
+            align-items: center;
+            margin-bottom:15px;
+        }
+		.liste{
+			li{
+				margin-bottom: 13px;
+				& span{
+					font-weight:$f-w-700;
+					margin-right: 10px;
+					color:$dark-color;
+				}	
+            }
+            &:last-child{
+                margin-left: auto;
+            }
+        }
+        .g-bottom{
+            display: flex;
+            align-items: center;
+        }
+		.btn-custom{
+            margin-right:30px;
+        }
+        .social-icons{
+            li{
+                margin-right: 15px;
+				i{
+					color:$dark-color;
+					font-size: 15px;
+					&:hover{
+						color:$base-color;
+					}
+				}
+            }
+        }
+    }
+    &-box{
+        background-color: $white-color;
+        padding:20px;
+        text-align: center;
+        border-radius: $rd-round;
+        margin-bottom:30px;
+        @include shadow();
+        h2{
+            font-weight: $f-w-900;
+            font-family: $heading-font;
+            margin-bottom:0;
+            line-height: 1.3;
+           
+            &:after {
+                content: '+';
+                position: absolute;
+                padding-left: 2px;
+                font-size: 25px;
+                font-weight:$f-w-400;
+                top: 25px;
+            }
+        }
+        p{
+            margin-bottom:0;
+            text-transform: capitalize;
+        }
+
+    }
+}
+
+.timeline{
+	padding:30px 30px 40px 30px;
+	border-radius:$rd-round;
+	background-color: $white-color;
+	margin-bottom:30px;
+	@include shadow();
+	
+	&-item{
+		display: flex;
+	   .icon{
+			position: relative;
+		    &:after{
+				@include after(auto,auto,8px,8px);
+				background-color: $base-color;
+				border-radius: $rd-circle;
+				margin-top:10px;
+				margin-left: -3px;
+			}
+			&:before{
+				@include after(auto,auto,1px,calc(100% - 30px));
+				background-color: $base-color;
+				margin-top:30px;
+        	}	   
+	  	}
+		.box{
+			padding-left: 50px;
+    		margin-bottom: 50px;
+			h5{
+				margin-bottom:5px;
+				span{
+					color:$dark-color;
+					font-weight:$f-w-400;
+					font-size: 16px;
+					text-transform: capitalize;
+				}
+			}
+			small{
+				color:$white-color;
+				padding: 3px 8px;
+    			font-weight:$f-w-500;
+    			font-size: 11px;
+    			letter-spacing: 0.5px;
+			}
+			p{
+				margin-top:10px;
+				margin-bottom:0;	
+			}
+		}
+		&:last-child{
+			.box{
+			  	margin-bottom: 0px;	
+			}
+		}
+	}
+}
+
+/*  Skills  */
+.skill-item {
+    margin-bottom: 30px;
+    p{
+		font-weight: $f-w-600;
+		margin-bottom:5px;
+    }
+	.skill-progress {
+		background-color:$eee;
+		border-radius: $rd-round;
+		&-bar{
+			width: 0;
+			height: 4px;
+			position: relative;
+			border-radius: $rd-round;
+			@include ease (0.5);
+			span {
+				position: absolute;
+				right: 0;
+				top: -24px;
+				font-size: 13px;
+				font-weight:$f-w-500;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

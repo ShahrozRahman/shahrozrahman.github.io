@@ -1,0 +1,261 @@
+/* -----------------------------------------------
+				CSS Styles 
+--------------------------------------------------
+
+    Template Name: Elmiz - Personal Portfolio Template
+    
+--------------------------------------------------
+
+Table of Content
+
+    - Global
+    - Section
+    - Menu
+    - Home
+    - About
+    - Services
+    - Works
+    - Blog
+    - Blog-single
+	- Contact 
+	- Preloader 
+    - Responsive
+    - Dark
+ 
+
+----------------------------------- */
+
+/* -----------------------------------
+		 Global
+----------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	outline: none !important;
+	list-style: none !important;
+}
+
+*:after, 
+*:before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html{
+   scroll-behavior: smooth;
+}
+
+body {
+    font-family:$body-font;
+    font-size: $f-s-p;
+    background-color: $bg-light;
+    color:$text-color;
+    font-weight: $f-w-400;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $heading-font;
+    font-weight: $f-w-700;
+    line-height:$line-height-base;
+    color:$dark-color;
+    margin:0;
+}
+
+h1 {
+  font-size: $f-s-h1;
+}
+
+h2 {
+  font-size: $f-s-h2;
+}
+
+h3 {
+  font-size: $f-s-h3;
+}
+
+h4 {
+  font-size: $f-s-h4;
+}
+
+h5 {
+  font-size: $f-s-h5;
+}
+
+h6 {
+  font-size: $f-s-h6;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    &:hover,
+    &:focus{
+       text-decoration: none;
+       color:$base-color
+    }
+}
+
+.base-color{
+    color: $base-color;
+}
+
+.bg-base-color{
+    background-color: $base-color;
+}
+
+.max-width-400{
+    max-width: 400px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul{
+    margin-bottom: 0;
+}
+.list-inline li{
+    display: inline-block; 
+}
+/* margin */
+.mb-50{
+    margin-bottom:50px;
+}
+.mb-40{
+    margin-bottom:40px;
+}
+.mb-30{
+    margin-bottom:30px;
+}
+.mb-20{
+    margin-bottom:20px;
+}
+.mt-40{
+  margin-top:40px;
+}
+
+
+
+/*  Buttons  */
+.btn-custom{
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    text-align: center;  
+    white-space: nowrap;
+    vertical-align: middle; 
+    font-size: $f-s-p;
+    font-weight:$f-w-600;
+    line-height: 24px;
+    padding: 8px 35px;
+    text-transform: capitalize;
+    z-index: 1;
+    border-radius:$rd-round;
+    background-color: $base-color;
+    color:$white-color;
+    border:1px solid $base-color;
+    @include ease(0.5);
+    &:hover,
+    &:focus{
+        color:$base-color;
+        background-color: transparent;
+        outline: none;
+    }
+
+}
+
+
+
+
+/*  Logo  */
+.main-logo{
+	position: absolute;
+	padding-top: 40px;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+
+	.logo{
+		font-weight:$f-w-600;
+		font-size: 22px;
+		font-family: $heading-font;
+		background-color: transparent;
+		color:$base-color;	
+		width:45px;
+		height:45px;
+		border-radius: $rd-circle;
+		display: inline-block;
+		line-height: 45px;
+		border:2px solid $base-color;
+		text-align: center;
+		&:hover{
+        	color:$base-color;
+		}
+		&-white{
+			background-color: transparent;
+			color:$white-color !important;
+			border:2px solid $white-color !important;
+			&:hover{
+				color:$white-color;
+			}
+		}
+	}
+}
+
+/* animation */
+.customFadeInUp {
+  animation-name: customFadeInUp;
+}
+@keyframes customFadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slow {
+    animation-duration: 1.5s;
+}
+
+.delay-0-2s {
+    animation-delay: 0.2s;
+}
+.delay-0-3s {
+    animation-delay: 0.3s;
+}
+.delay-0-4s {
+    animation-delay: 0.4s;
+}
+.delay-0-5s {
+    animation-delay: 0.5s;
+}
+.delay-0-6s {
+    animation-delay: 0.6s;
+}
+.delay-0-7s {
+    animation-delay: 0.7s;
+}
+.delay-0-8s {
+    animation-delay: 0.8s;
+}
+.delay-0-9s {
+    animation-delay: 0.9s;
+}
+.delay-0-10s {
+    animation-delay: 1s;
+}
+
+
+
+
+
+

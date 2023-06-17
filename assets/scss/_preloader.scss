@@ -1,0 +1,36 @@
+/* -----------------------------
+		 Preloader 
+--------------------------------- */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $bg-light;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .circle {
+        margin:auto;
+        width: 40px;
+        height: 40px;
+        border-radius:$rd-circle;
+        background-color:$base-color;
+        animation: load 0.9s infinite linear;
+    }
+}
+
+@keyframes load {
+    0% {
+	    transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
