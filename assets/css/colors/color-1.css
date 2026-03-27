@@ -1,0 +1,84 @@
+:root{
+  --color:#f21e4e;
+}
+.base-color,
+a:hover, a:focus,
+.btn-custom:hover,
+.btn-custom:focus,
+.main-menu .menu li a.active,
+.home-banner .social-icons li i:hover,
+.main-logo .logo:hover,
+.pricing-item .content .price h3 ,
+.pricing-item .content .price h3 span ,
+.works-filters li.active ,
+.blog-item:hover h5 a,
+.pagination li a ,
+.blog-single .meta p i ,
+.widget-categories ul a:hover,
+.contact-item .social-icons li,
+.btn-transparenty,
+.main-logo .logo,
+.about-info .social-icons li i:hover,
+.contact-item .social-icons li i:hover ,
+ body.dark .about-box h2,
+ body.dark .about-info .social-icons li i:hover{
+   color: var(--color);
+}
+.pricing-item:hover .price{
+  background-color: var(--color) !important;
+}
+
+.bg-base-color,
+.btn-transparenty:hover,
+.section-sub-title:after,
+.section-sub-title:before,
+.main-menu .menu li a.active:after,
+.home-5,
+.loading .circle,
+.testimonials .owl-dot.active span,
+.pricing-item:hover .price,
+.widget-search .search-form .submit-btn,
+.widget-categories ul .badge-pill,
+.pagination li.active, .pagination li:hover,
+.works-item .image:hover .overly .details a:hover,
+.timeline-item .icon:before,
+.timeline-item .icon:after,
+.btn-custom  {
+     background-color: var(--color);
+}
+
+.btn-custom,
+.btn-transparenty ,
+.testimonials .owl-dot span,
+.pricing-item .content .price,
+.pagination li   {
+    border: 1px solid var(--color);
+}
+
+.main-logo .logo,
+.testimonials-item .image img  {
+    border: 2px solid var(--color);
+}
+
+.home-4:after {
+    background: var(--color) none repeat scroll 0 0;
+}
+.service-item h5:after {
+  border-top: 1px solid var(--color);
+  border-right: 1px solid var(--color);
+
+}
+.service-item h5:before {
+  border-left: 1px solid var(--color);
+}
+.pricing-item:after,
+.service-item h5:before {
+  border-bottom: 1px solid var(--color);
+}
+.blog-single .quote {
+  border-left: 3px solid var(--color);
+}
+
+
+
+

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shahroz Rahman - Bioinformatician and Data Scientist specializing in genomics, proteomics, and computational biology.">
+    <meta name="keywords" content="Bioinformatics, Data Science, Genomics, Proteomics, Python, R, Research">
+    <meta name="author" content="Shahroz Rahman">
+
+    <title>Shahroz Rahman | Bioinformatician & Data Scientist</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Scan Line Overlay -->
+    <div class="scan-line"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">SR_</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#works" class="nav-link">Works</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-greeting animate-fade-up">Hey there!</p>
+                <h1 class="hero-title animate-fade-up delay-1">
+                    I'm <span class="gradient-text">Shahroz Rahman</span>
+                </h1>
+                <div class="hero-subtitle animate-fade-up delay-2">
+                    <span class="typewriter-prefix">A </span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <p class="hero-description animate-fade-up delay-3">
+                    I'm a professional bioinformatician with expertise in genomics, proteomics, and computational biology. I help researchers and organizations analyze complex biological data, develop custom bioinformatics pipelines, and extract meaningful insights from genomic studies.
+                </p>
+                <div class="hero-socials animate-fade-up delay-4">
+                    <a href="https://scholar.google.com/citations?hl=en&user=lbu7ne0AAAAJ" class="social-icon neu-icon" aria-label="Google Scholar" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shahroz-rahman/" class="social-icon neu-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/ShahrozRahman" class="social-icon neu-icon" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/shahrozrahman01" class="social-icon neu-icon" aria-label="Twitter" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://medium.com/@shahrozrahman" class="social-icon neu-icon" aria-label="Medium" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-medium"></i>
+                    </a>
+                    <a href="https://www.udemy.com/user/shahroz-rahman-2" class="social-icon neu-icon udemy-icon" aria-label="Udemy" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 412.77 799.91" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                            <path d="M412.74 238.2l-206.4-119.1L0 238.2V119.1L206.37 0l206.4 119.1v119.1z" fill="currentColor"/>
+                            <path d="M0 338.22h108.11v262.54c0 67.83 50.67 100.9 98.26 100.9 48 0 98.3-33.95 98.3-101.81V338.22h108.1v268.8c0 62.48-19.65 110.7-58.96 143.76-39.33 33.04-88.45 49.13-148.35 49.13-59.84 0-108.99-16.06-147.38-49.13C19.65 717.75 0 671.32 0 609.69z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-cta animate-fade-up delay-5">
+                    <a href="#about" class="btn btn-primary neu-btn">
+                        <span>More About Me</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    <a href="./assets/Shahroz_Rahman-cv.pdf" class="btn btn-secondary neu-btn" download>
+                        <span>Download CV</span>
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Know About Me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-main fade-in">
+                <div class="about-left">
+                    <div class="about-text">
+                        <h3>Professional Bioinformatician & Computational Biology Consultant</h3>
+                        <p>
+                            With a BS in Bioinformatics from GCUF and extensive research experience, I provide professional bioinformatics services to academic institutions, biotech companies, and research organizations worldwide. My expertise spans NGS analysis, single-cell genomics, variant calling, and multi-omics integration. I've contributed to 9+ peer-reviewed publications and successfully delivered numerous bioinformatics projects, combining strong computational skills with deep biological knowledge to solve complex research challenges.
+                        </p>
+                    </div>
+                    <div class="about-contact">
+                        <div class="info-item">
+                            <i class="fa-solid fa-user"></i>
+                            <div>
+                                <span>Name</span>
+                                <strong>Shahroz Rahman</strong>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <span>Email</span>
+                                <strong>shahrozrahman.me@gmail.com</strong>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <span>Phone</span>
+                                <strong>+92 (344)-6497495</strong>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span>Location</span>
+                                <strong>Faisalabad, Pakistan</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card neu-card">
+                        <h4>09</h4>
+                        <p>Publications</p>
+                    </div>
+                    <div class="stat-card neu-card">
+                        <h4>03</h4>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-card neu-card">
+                        <h4>20+</h4>
+                        <p>Certificates</p>
+                    </div>
+                    <div class="stat-card neu-card">
+                        <h4>02</h4>
+                        <p>Developed Apps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section-alt" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Offer</span>
+                <h2 class="section-title">Professional Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card neu-card fade-in">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-dna"></i>
+                    </div>
+                    <h3>NGS Data Analysis</h3>
+                    <p>Comprehensive analysis of RNA-seq, ChIP-seq, and whole-genome sequencing data using state-of-the-art tools and pipelines.</p>
+                    <ul class="service-features">
+                        <li>Quality control & preprocessing</li>
+                        <li>Differential expression analysis</li>
+                        <li>Pathway enrichment analysis</li>
+                        <li>Custom visualization</li>
+                    </ul>
+                </div>
+                <div class="service-card neu-card fade-in delay-1">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Pipeline Development</h3>
+                    <p>Custom bioinformatics pipeline development and automation for high-throughput data processing and analysis workflows.</p>
+                    <ul class="service-features">
+                        <li>Nextflow & Snakemake pipelines</li>
+                        <li>Docker containerization</li>
+                        <li>Cloud deployment</li>
+                        <li>Documentation & training</li>
+                    </ul>
+                </div>
+                <div class="service-card neu-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>Single-Cell Analysis</h3>
+                    <p>Advanced single-cell RNA-seq analysis including clustering, trajectory inference, and cell type identification.</p>
+                    <ul class="service-features">
+                        <li>Data preprocessing & QC</li>
+                        <li>Cell clustering & annotation</li>
+                        <li>Pseudotime analysis</li>
+                        <li>Comparative studies</li>
+                    </ul>
+                </div>
+                <div class="service-card neu-card fade-in delay-3">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3>Multi-Omics Integration</h3>
+                    <p>Integrative analysis combining genomics, transcriptomics, and proteomics data for comprehensive biological insights.</p>
+                    <ul class="service-features">
+                        <li>Cross-platform integration</li>
+                        <li>Network analysis</li>
+                        <li>Biomarker discovery</li>
+                        <li>Systems biology approaches</li>
+                    </ul>
+                </div>
+                <div class="service-card neu-card fade-in delay-4">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3>Consultation & Training</h3>
+                    <p>Expert consultation on bioinformatics strategies and hands-on training for research teams and organizations.</p>
+                    <ul class="service-features">
+                        <li>Project planning & design</li>
+                        <li>Tool selection & implementation</li>
+                        <li>Team training workshops</li>
+                        <li>Ongoing support</li>
+                    </ul>
+                </div>
+                <div class="service-card neu-card fade-in delay-5">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-search"></i>
+                    </div>
+                    <h3>Variant Analysis</h3>
+                    <p>Comprehensive variant calling, annotation, and interpretation for both germline and somatic mutations.</p>
+                    <ul class="service-features">
+                        <li>SNP/Indel calling</li>
+                        <li>Structural variant detection</li>
+                        <li>Clinical annotation</li>
+                        <li>Population genetics analysis</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-cta fade-in">
+                <a href="#contact" class="btn btn-primary neu-btn">
+                    Get a Quote <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Work & Education</h2>
+            </div>
+            <div class="timeline-grid">
+                <div class="timeline-column">
+                    <h3 class="timeline-heading">
+                        <i class="fa-solid fa-briefcase"></i> Work Experience
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item neu-card fade-in">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Aug 2025 - Present</span>
+                                <h4>Bioinformatics Data Analyst</h4>
+                                <p>Freelancer - Providing bioinformatics analysis services including NGS data processing, single-cell analysis, and custom pipeline development.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item neu-card fade-in delay-1">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Sep 2023 - Jul 2025</span>
+                                <h4>Computational Data Analyst</h4>
+                                <p>Research Assistant at Functional Genomics and Plant Tissue Culture Lab, GCUF. Conducted multi-omics analysis, developed bioinformatics tools, and contributed to 9 publications.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item neu-card fade-in delay-2">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Oct - Nov 2022</span>
+                                <h4>Research Intern</h4>
+                                <p>OilSeed Research Institute, AYUB Research Institute, FSD. Worked on determination of fatty acid profile in oilseed crops.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-column">
+                    <h3 class="timeline-heading">
+                        <i class="fa-solid fa-graduation-cap"></i> Education
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item neu-card fade-in">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019 - 2023</span>
+                                <h4>BS Bioinformatics</h4>
+                                <p>Government College University Faisalabad (GCUF). CGPA: 3.72/4.00. Department of Bioinformatics and Biotechnology.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item neu-card fade-in delay-1">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017 - 2019</span>
+                                <h4>Higher Secondary Education</h4>
+                                <p>BISE Faisalabad. Pre-Medical studies with focus on Biology, Chemistry, and Physics.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item neu-card fade-in delay-2">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Ongoing</span>
+                                <h4>Continuous Learning</h4>
+                                <p>20+ certifications in bioinformatics, data science, and computational biology from Coursera, DataCamp, and other platforms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">My Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category neu-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">HTML/CSS/JS</span>
+                    </div>
+                </div>
+                <div class="skill-category neu-card fade-in delay-1">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-dna"></i>
+                    </div>
+                    <h3>NGS & Omics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">RNA-Seq</span>
+                        <span class="skill-tag">Single-Cell</span>
+                        <span class="skill-tag">Variant Calling</span>
+                        <span class="skill-tag">ChIP-Seq</span>
+                        <span class="skill-tag">Metagenomics</span>
+                    </div>
+                </div>
+                <div class="skill-category neu-card fade-in delay-2">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">DEG Analysis</span>
+                        <span class="skill-tag">Pathway Analysis</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Visualization</span>
+                    </div>
+                </div>
+                <div class="skill-category neu-card fade-in delay-3">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">RStudio</span>
+                        <span class="skill-tag">Galaxy</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+                <div class="skill-category neu-card fade-in delay-4">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3>Lab Techniques</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PCR</span>
+                        <span class="skill-tag">RT-PCR</span>
+                        <span class="skill-tag">SDS-PAGE</span>
+                        <span class="skill-tag">ELISA</span>
+                        <span class="skill-tag">Cell Culture</span>
+                    </div>
+                </div>
+                <div class="skill-category neu-card fade-in delay-5">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-pen-fancy"></i>
+                    </div>
+                    <h3>Research</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scientific Writing</span>
+                        <span class="skill-tag">Molecular Docking</span>
+                        <span class="skill-tag">PPI Networks</span>
+                        <span class="skill-tag">Phylogenetics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section section-alt" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Learn With Me</span>
+                <h2 class="section-title">My Courses</h2>
+            </div>
+            <div class="courses-grid">
+                <article class="course-card neu-card fade-in">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-platform">Udemy</span>
+                        <h3>NGS and Microarray Data Analysis In Bioinformatics</h3>
+                        <p>A Practical, End-to-End Guide to Gene Expression Analysis Using NGS and Microarray Data</p>
+                        <a href="https://www.udemy.com/course/ngs-and-microarray-data-analysis-in-bioinformatics/?referralCode=D1E22239BF4F7A2BF9C2" class="course-link" target="_blank" rel="noopener">
+                            Enroll Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="course-card neu-card fade-in delay-1">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-platform">Udemy</span>
+                        <h3>Computational Techniques for Protein 3D Structure Prediction</h3>
+                        <p>Learn how to Predict Protein 3D Structure using Computational Tools for Drug Discovery and more.</p>
+                        <a href="https://www.udemy.com/course/computational-techniques-for-protein-3d-structure-prediction/?referralCode=99049479B561EB20DE9C" class="course-link" target="_blank" rel="noopener">
+                            Enroll Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="course-card neu-card fade-in delay-2">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-vial"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-platform">Udemy</span>
+                        <h3>De-Novo Proteomics Data Analysis for Bioinformatics Research</h3>
+                        <p>Learn the best of proteomics data analysis from protein sequence retrieval to 3D structure prediction and much more!</p>
+                        <a href="https://www.udemy.com/course/de-novo-proteomics-data-analysis-for-bioinformatics-research/?referralCode=FB18E644E2FA6EF1ADE0" class="course-link" target="_blank" rel="noopener">
+                            Enroll Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="course-card neu-card fade-in delay-3">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-platform">Udemy</span>
+                        <h3>A Comprehensive Guide to Databases in Bioinformatics</h3>
+                        <p>Unlock your True Potential as a Bioinformatician with Advanced Database Techniques</p>
+                        <a href="https://www.udemy.com/course/a-comprehensive-guide-to-databases-in-bioinformatics/?referralCode=4EA508702710A152F463" class="course-link" target="_blank" rel="noopener">
+                            Enroll Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="course-card neu-card fade-in delay-4">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-align-left"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-platform">Udemy</span>
+                        <h3>Sequence Alignment Made Simple for Research</h3>
+                        <p>Learn the best of sequence alignment through hands on practice exercises and best instructions.</p>
+                        <a href="https://www.udemy.com/course/sequence-alignment-made-simple-for-research-a-quick-guide/?referralCode=2D8284566094520172ED" class="course-link" target="_blank" rel="noopener">
+                            Enroll Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="section-cta fade-in">
+                <a href="https://www.udemy.com/user/shahroz-rahman-2" class="btn btn-primary neu-btn" target="_blank" rel="noopener">
+                    View All on Udemy <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section section-alt" id="publications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Research Work</span>
+                <h2 class="section-title">Publications</h2>
+            </div>
+            <div class="publications-list">
+                <article class="publication-item neu-card fade-in">
+                    <div class="publication-year">2025</div>
+                    <div class="publication-details">
+                        <h3>Genome-wide Identification of bZIP transcription factors and their role toward drought stress and fruit development in <em>Mangifera indica</em> (Mango)</h3>
+                        <p class="publication-authors"><strong>Rahman S</strong>, Haris M, Rehman A, Farooq MS, Naveed H, Waheed T, Sajjad M, Aslam MN, Ahmad S, Hassan MU, Qari SH</p>
+                        <p class="publication-journal">Crop and Pasture Science, 2025</p>
+                        <a href="https://doi.org/10.1071/CP25008" class="publication-link" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                        </a>
+                    </div>
+                </article>
+                <article class="publication-item neu-card fade-in">
+                    <div class="publication-year">2025</div>
+                    <div class="publication-details">
+                        <h3>Computational Approaches for Retrotransposon Investigations</h3>
+                        <p class="publication-authors">Rahman A, <strong>Rahman S</strong>, Sajjad M, Ahmad S</p>
+                        <p class="publication-journal">In: Functional Genomics: Methods and Protocols, Volume 3. Taylor & Francis, 2025</p>
+                        <a href="https://doi.org/10.1201/9781032663494-5" class="publication-link" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Chapter
+                        </a>
+                    </div>
+                </article>
+                <article class="publication-item neu-card fade-in">
+                    <div class="publication-year">2025</div>
+                    <div class="publication-details">
+                        <h3>Tissue Culture Optimization: Maize Callus Induction and Factors Affecting the Callus Efficiency</h3>
+                        <p class="publication-authors">Haris M, Sajjad M, Irshad S, Hassan MU, <strong>Rahman S</strong>, Bukhari MAH, Akbar M, Waheed A, Ahmad S</p>
+                        <p class="publication-journal">Integrative Plant Biotechnology, 2025</p>
+                        <a href="https://doi.org/10.55627/pbiotech.003.02.1288" class="publication-link" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                        </a>
+                    </div>
+                </article>
+                <article class="publication-item neu-card fade-in">
+                    <div class="publication-year">2025</div>
+                    <div class="publication-details">
+                        <h3>Effects of Exposure to Environmental Pollutants on Male Fertility</h3>
+                        <p class="publication-authors">Mudassar M, Ishtiaq S, Riaz A, <strong>Rahman S</strong>, Akbar M, Batool F, Ahmad S</p>
+                        <p class="publication-journal">Annual Methodological Archive Research Review, 2025</p>
+                        <a href="https://doi.org/10.63075/5kxcr887" class="publication-link" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                        </a>
+                    </div>
+                </article>
+                <article class="publication-item neu-card fade-in">
+                    <div class="publication-year">2026</div>
+                    <div class="publication-details">
+                        <h3>HCMdrugs: A Web-Based Database Cataloging the Drugs Available for the Treatment of Hypertrophic Cardiomyopathy</h3>
+                        <p class="publication-authors">Haris M, <strong>Rahman S</strong>, Hassan MU, Sattar S, Sajjad M, Ahmad Z, Ahmad S</p>
+                        <p class="publication-journal">Journal of Computational Biophysics and Chemistry, 2026</p>
+                        <a href="https://doi.org/10.1142/S2737416525500954" class="publication-link" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                        </a>
+                    </div>
+                </article>
+                <article class="publication-item neu-card fade-in">
+                    <div class="publication-year">2024</div>
+                    <div class="publication-details">
+                        <h3>Genome-wide profiling of bZIP transcription factors in <em>Camelina sativa</em>: implications for development and stress response</h3>
+                        <p class="publication-authors"><strong>Rahman S</strong>, Rehman A, Haris M, Naveed H, Iqbal MW, Sajjad M, Ahmad S, Awais M</p>
+                        <p class="publication-journal">BMC Genomic Data, 2024</p>
+                        <a href="https://doi.org/10.1186/s12863-024-01270-6" class="publication-link" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                        </a>
+                    </div>
+                </article>
+                <article class="publication-item neu-card fade-in">
+                    <div class="publication-year">2024</div>
+                    <div class="publication-details">
+                        <h3>Precision Genome Editing with CRISPR-Cas9</h3>
+                        <p class="publication-authors"><strong>Rahman S</strong>, Naveed H, Haris M, Aslam MN, Sajjad M, Ahmad S</p>
+                        <p class="publication-journal">In: Plant Functional Genomics: Methods and Protocols, Volume 2. Springer US, 2024</p>
+                        <a href="https://doi.org/10.1007/978-1-0716-3782-1_21" class="publication-link" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Chapter
+                        </a>
+                    </div>
+                </article>
+                <article class="publication-item neu-card fade-in">
+                    <div class="publication-year">2024</div>
+                    <div class="publication-details">
+                        <h3>Regulatory role of AGC genes in heat stress adaptation in maize (<em>Zea mays</em>)</h3>
+                        <p class="publication-authors">Rehman A, <strong>Rahman S</strong>, Ali MA, Ahmad S</p>
+                        <p class="publication-journal">Functional Plant Biology, 2024</p>
+                        <a href="https://doi.org/10.1071/FP23282" class="publication-link" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                        </a>
+                    </div>
+                </article>
+                <article class="publication-item neu-card fade-in">
+                    <div class="publication-year">2023</div>
+                    <div class="publication-details">
+                        <h3>Genome-wide exploration of bZIP transcription factors and their contribution to alkali stress response in <em>Helianthus annuus</em></h3>
+                        <p class="publication-authors"><strong>Rahman S</strong>, Rehman A, Ahmad S</p>
+                        <p class="publication-journal">Plant Stress, 2023</p>
+                        <a href="https://doi.org/10.1016/j.stress.2023.100204" class="publication-link" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="section-cta fade-in">
+                <a href="https://scholar.google.com/citations?user=lbu7ne0AAAAJ&hl=en" class="btn btn-primary neu-btn" target="_blank" rel="noopener">
+                    View on Google Scholar <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section class="section" id="works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Portfolio</span>
+                <h2 class="section-title">Featured Works</h2>
+            </div>
+            <div class="works-filter fade-in">
+                <button class="filter-btn active" data-filter="all">Everything</button>
+                <button class="filter-btn" data-filter="bioinformatics">Bioinformatics</button>
+                <button class="filter-btn" data-filter="app">Apps</button>
+                <button class="filter-btn" data-filter="courses">Courses</button>
+            </div>
+            <div class="works-grid">
+                <div class="work-item neu-card fade-in" data-category="bioinformatics">
+                    <div class="work-image">
+                        <img src="assets/img/works/1.jpg" alt="Phylogenetics Analysis" loading="lazy">
+                        <div class="work-overlay">
+                            <span class="work-category">Bioinformatics</span>
+                            <h4>Phylogenetics</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item neu-card fade-in" data-category="courses">
+                    <div class="work-image">
+                        <img src="assets/img/works/2.jpg" alt="R Course" loading="lazy">
+                        <div class="work-overlay">
+                            <span class="work-category">Course</span>
+                            <h4>R for Bioinformatics</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item neu-card fade-in" data-category="bioinformatics">
+                    <div class="work-image">
+                        <img src="assets/img/works/3.jpg" alt="CRISPR/Cas9 Book Chapter" loading="lazy">
+                        <div class="work-overlay">
+                            <span class="work-category">Book Chapter</span>
+                            <h4>CRISPR/Cas9</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item neu-card fade-in" data-category="courses">
+                    <div class="work-image">
+                        <img src="assets/img/works/4.jpg" alt="Proteomics Course" loading="lazy">
+                        <div class="work-overlay">
+                            <span class="work-category">Course</span>
+                            <h4>De Novo Proteomics</h4>
+                            <a href="https://www.udemy.com/course/de-novo-proteomics-data-analysis-for-bioinformatics-research/?referralCode=FB18E644E2FA6EF1ADE0" class="work-link" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item neu-card fade-in" data-category="bioinformatics">
+                    <div class="work-image">
+                        <img src="assets/img/works/5.jpg" alt="Gene Expression Analysis" loading="lazy">
+                        <div class="work-overlay">
+                            <span class="work-category">Bioinformatics</span>
+                            <h4>Gene Expression</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item neu-card fade-in" data-category="app">
+                    <div class="work-image">
+                        <img src="assets/img/works/6.jpg" alt="2DGene App" loading="lazy">
+                        <div class="work-overlay">
+                            <span class="work-category">App</span>
+                            <h4>2DGene</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item neu-card fade-in" data-category="bioinformatics">
+                    <div class="work-image">
+                        <img src="assets/img/works/7.jpg" alt="Phenotyping Book Chapter" loading="lazy">
+                        <div class="work-overlay">
+                            <span class="work-category">Book Chapter</span>
+                            <h4>Phenotyping</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item neu-card fade-in" data-category="courses">
+                    <div class="work-image">
+                        <img src="assets/img/works/8.jpg" alt="BioPython Course" loading="lazy">
+                        <div class="work-overlay">
+                            <span class="work-category">Course</span>
+                            <h4>BioPython</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item neu-card fade-in" data-category="bioinformatics">
+                    <div class="work-image">
+                        <img src="assets/img/works/9.jpg" alt="Protein-Protein Interaction" loading="lazy">
+                        <div class="work-overlay">
+                            <span class="work-category">Bioinformatics</span>
+                            <h4>PPI Networks</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section section-alt" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Writings</span>
+                <h2 class="section-title">Latest Blog Posts</h2>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card neu-card fade-in">
+                    <div class="blog-content">
+                        <h3><a href="https://shahrozrahman.medium.com/navigating-the-ethical-landscape-a-guide-to-responsible-research-practices-2fe714d42862" target="_blank" rel="noopener">A Guide to Responsible Research Practices</a></h3>
+                        <p>Research ethics is a set of principles, rules, and regulations that guide the conduct of research...</p>
+                        <a href="https://shahrozrahman.medium.com/navigating-the-ethical-landscape-a-guide-to-responsible-research-practices-2fe714d42862" class="blog-link" target="_blank" rel="noopener">
+                            Read More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="blog-card neu-card fade-in delay-1">
+                    <div class="blog-content">
+                        <h3><a href="https://shahrozrahman.medium.com/transforming-bioinformatics-the-significance-of-ai-tools-9eadaf8fa7b0" target="_blank" rel="noopener">Significance of AI Tools in Bioinformatics</a></h3>
+                        <p>In the rapidly evolving field of bioinformatics, the deluge of biological data poses a significant challenge...</p>
+                        <a href="https://shahrozrahman.medium.com/transforming-bioinformatics-the-significance-of-ai-tools-9eadaf8fa7b0" class="blog-link" target="_blank" rel="noopener">
+                            Read More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="blog-card neu-card fade-in delay-2">
+                    <div class="blog-content">
+                        <h3><a href="https://shahrozrahman.medium.com/effortlessly-extract-high-quality-rna-for-your-experiments-36495abc69f4" target="_blank" rel="noopener">Effortlessly Extract High-Quality RNA</a></h3>
+                        <p>RNA (ribonucleic acid) is a molecule that plays a critical role in many cellular processes...</p>
+                        <a href="https://shahrozrahman.medium.com/effortlessly-extract-high-quality-rna-for-your-experiments-36495abc69f4" class="blog-link" target="_blank" rel="noopener">
+                            Read More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="section-cta fade-in">
+                <a href="https://medium.com/@shahrozrahman" class="btn btn-primary neu-btn" target="_blank" rel="noopener">
+                    View All Posts <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Let's Work Together</span>
+                <h2 class="section-title">Contact Me</h2>
+                <p>Ready to collaborate on your next bioinformatics project? Let's discuss how I can help you achieve your research goals.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <div class="contact-card neu-card">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+923446497495">+92 (344)-6497495</a>
+                        </div>
+                    </div>
+                    <div class="contact-card neu-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:shahrozrahman.me@gmail.com">shahrozrahman.me@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card neu-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Faisalabad, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://scholar.google.com/citations?hl=en&user=lbu7ne0AAAAJ" class="social-icon neu-icon" target="_blank" rel="noopener" aria-label="Google Scholar">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/shahroz-rahman/" class="social-icon neu-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/ShahrozRahman" class="social-icon neu-icon" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://twitter.com/shahrozrahman01" class="social-icon neu-icon" target="_blank" rel="noopener" aria-label="Twitter">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/shahroz_rahman/" class="social-icon neu-icon" target="_blank" rel="noopener" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.udemy.com/user/shahroz-rahman-2" class="social-icon neu-icon udemy-icon" target="_blank" rel="noopener" aria-label="Udemy">
+                                <svg viewBox="0 0 412.77 799.91" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                    <path d="M412.74 238.2l-206.4-119.1L0 238.2V119.1L206.37 0l206.4 119.1v119.1z" fill="currentColor"/>
+                                    <path d="M0 338.22h108.11v262.54c0 67.83 50.67 100.9 98.26 100.9 48 0 98.3-33.95 98.3-101.81V338.22h108.1v268.8c0 62.48-19.65 110.7-58.96 143.76-39.33 33.04-88.45 49.13-148.35 49.13-59.84 0-108.99-16.06-147.38-49.13C19.65 717.75 0 671.32 0 609.69z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper fade-in delay-1">
+                    <form action="https://formspree.io/f/mdovqwkb" method="POST" class="contact-form neu-card" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" class="form-input neu-input" placeholder=" " required>
+                            <label for="name" class="form-label">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-input neu-input" placeholder=" " required>
+                            <label for="email" class="form-label">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" id="subject" class="form-input neu-input" placeholder=" " required>
+                            <label for="subject" class="form-label">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" class="form-input form-textarea neu-input" placeholder=" " rows="5" required></textarea>
+                            <label for="message" class="form-label">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary neu-btn btn-full">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="gradient-text">Shahroz Rahman</span>
+                </div>
+                <p class="footer-text">Bioinformatician & Data Scientist</p>
+                <div class="footer-socials">
+                    <a href="https://scholar.google.com/citations?hl=en&user=lbu7ne0AAAAJ" class="social-icon" target="_blank" rel="noopener" aria-label="Google Scholar">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shahroz-rahman/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/ShahrozRahman" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/shahrozrahman01" class="social-icon" target="_blank" rel="noopener" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.udemy.com/user/shahroz-rahman-2" class="social-icon udemy-icon" target="_blank" rel="noopener" aria-label="Udemy">
+                        <svg viewBox="0 0 412.77 799.91" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                            <path d="M412.74 238.2l-206.4-119.1L0 238.2V119.1L206.37 0l206.4 119.1v119.1z" fill="currentColor"/>
+                            <path d="M0 338.22h108.11v262.54c0 67.83 50.67 100.9 98.26 100.9 48 0 98.3-33.95 98.3-101.81V338.22h108.1v268.8c0 62.48-19.65 110.7-58.96 143.76-39.33 33.04-88.45 49.13-148.35 49.13-59.84 0-108.99-16.06-147.38-49.13C19.65 717.75 0 671.32 0 609.69z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-copyright">&copy; 2025 Shahroz Rahman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top neu-icon" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

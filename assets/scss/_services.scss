@@ -1,0 +1,245 @@
+/* ------------------------------
+		  Services
+------------------------------ */
+.service-item{ 
+    padding:30px;
+    margin-bottom: 60px; 
+    border-radius: $rd-round;
+    text-align: center;
+    position: relative;
+    background-color: $white-color;
+    @include ease(0.7);
+    @include shadow();
+       
+    .icon{
+        width:80px;
+        height:80px;
+        border-radius:$rd-circle;
+        text-align: center;
+        margin:auto;
+        position: absolute;
+        top:-40px;
+        left:0;
+        right:0;
+        border:8px solid $bg-light;
+        i{
+            line-height: 60px;
+            font-size:20px;
+            color:$white-color;
+        }
+        h4{
+            color:$white-color;
+            line-height: 60px;
+        }
+    }
+    h5{
+        margin-top:50px;
+        margin-bottom:30px;
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+      
+        &:after{
+            @include after(auto,0,30px,30px);
+            border-top:1px solid $base-color;
+            border-right:1px solid $base-color;
+            right:0;
+        }
+        &:before{
+            @include after(0,auto,30px,30px);
+            bottom:0;
+            border-bottom:1px solid $base-color;
+            border-left:1px solid $base-color;
+        }
+    }
+    p{
+        margin-bottom:5px;
+    }
+
+    &:hover{
+        transform: translateY(-10px);
+        @include shadow();
+    }
+}
+
+/* testimonials */
+.testimonials{ 
+    &-item{
+        padding: 30px;
+        border-radius: $rd-round;
+        background-color: $white-color;
+        margin-top:10px;
+        margin-bottom:30px;
+        text-align: center;
+        margin:auto;
+        @include ease(0.5);
+        @include shadow();
+   
+        .icon{
+            font-size: 30px;
+            display: inline-block;
+            border-radius: $rd-circle;
+            width:40px;
+            height: 40px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top:10px;
+            span{
+                color:$white-color;
+                line-height: 40px;
+                top: 0;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        .image{
+            margin:auto;
+            margin-bottom:20px;
+            padding-top:5px;
+            img{
+                width:90px;
+                height:90px;
+                border-radius: $rd-circle;
+                margin: auto;
+                border:2px solid $base-color;
+                padding:2px;
+            }
+        }
+        h6{
+            font-weight:$f-w-600;
+        }
+        .job{
+            margin-bottom:20px;
+            font-size: 15px;
+        }
+    }
+    
+    .owl-dots{
+        text-align: center;
+        line-height: 0;
+        margin-bottom:30px;
+    }
+    .owl-dot span {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        border:0;
+        margin: 0 6px;
+        border-radius: $rd-round;
+        border:1px solid $base-color;
+        @include ease(0.5);
+    }
+    .owl-dot.active span {
+        background-color: $base-color;
+    }
+
+    .owl-stage-outer {
+        padding-bottom: 30px;
+    }
+}
+
+/* clients */
+.clients-item{
+    margin-bottom: 30px;
+    border-radius: $rd-round;
+    img{
+        opacity: 0.8;  
+    }
+    &:hover{
+        img{
+            opacity: 1;
+        }
+    }
+}
+
+
+/*  Pricing  */
+.pricing-item{
+    text-align: center;
+    padding: 30px 0px;
+    border-radius: $rd-round;
+    position: relative;
+    margin-bottom:30px;
+    background-color: $white-color;
+    z-index: 1;
+    @include shadow();
+    @include ease(0.7); 
+
+    &:after{
+        @include after(0,0,100%,110px);
+        background-color: $white-color;
+        right:0;
+        z-index: -1;
+        border-radius: $rd-round;
+        border-bottom-left-radius: $rd-circle;
+        border-bottom-right-radius: $rd-circle;
+        border-bottom:1px solid $base-color;
+        @include ease(1); 
+    }
+    h5{
+        margin-bottom:15px;
+        line-height: 1;
+    }
+
+
+    .content{
+        position: relative;
+        .price{
+            background:$white-color;
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            border-radius: $rd-circle;
+            z-index: 2;
+            border:1px solid $base-color;
+            @include ease(0.7);
+            h3{
+                font-weight:$f-w-700;
+                line-height: 66px;
+                color:$base-color;
+                position: absolute;
+                margin:auto;
+                text-align: center;
+                left:0;
+                right:0;
+                span{
+                    font-size:11px;
+                    color:$base-color;
+                    font-weight: $f-w-400;
+                    margin-top: 19px;
+                    position: absolute;
+                    margin-left: -41px;
+                } 
+            }
+        }
+        ul{
+            list-style-type: none;
+            margin:30px 0;
+           
+            li{
+                margin-bottom: 10px;
+                text-align:center;
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+     
+    &:hover{
+        transform: translateY(-10px);
+        @include ease(1);
+        .price{
+            background-color: $base-color;
+            h3,span{
+                color:$white-color !important;
+            }
+        }
+    }
+}
+
+

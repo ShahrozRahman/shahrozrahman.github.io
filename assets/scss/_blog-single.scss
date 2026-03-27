@@ -1,0 +1,175 @@
+/* ---------------------------------
+		Blog-single
+--------------------------------- */
+
+.blog-single{
+	padding:30px;
+	border-radius: $rd-round;
+	background-color: $white-color;
+	margin-bottom:30px;
+	@include shadow();
+	.thumbnail{
+		margin-bottom:15px;
+	}
+	img{
+		border-radius: 5px;
+		margin-bottom: 15px;
+	}
+	.title{
+		margin-bottom:16px;
+	}
+	.quote{
+	  	background-color: $bg-light;
+	  	padding:20px;
+	  	border-left:3px solid $base-color;
+	}
+	.meta{
+		display: flex;
+		align-items: center;
+		margin-top:35px;
+		p{
+			font-size: 14px;
+			span{
+				margin-right:20px;
+			}
+			i{
+				color:$base-color;
+				margin-right: 5px;
+			}
+		}
+		
+		.social-links{
+		  	li{
+			  margin-right: 15px;
+		  	}
+		}
+	}
+	.footer-author{
+		display: flex;
+		align-items: center;
+		background-color: $bg-light;
+		padding:30px;
+		border-radius:5px;
+		margin-top:50px;
+		img{
+			width:110px;
+			margin-right:20px;
+			border-radius: $rd-circle;
+			margin-bottom: 0;
+		}
+		
+		p{
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*  widget  */
+.widget{
+	margin-bottom:30px;
+	background-color: $white-color;
+	padding:15px 20px 20px 20px;
+	border-radius: $rd-round;
+	@include shadow();
+	&-title{
+		margin-bottom: 10px;
+	}
+ 	&-search{
+     	.search-form{
+			display: flex;
+			align-items: center;
+			position: relative;
+			width: 100%;
+			.form-group{
+				width: 100%;
+				margin-bottom: 0;
+			}
+			.form-control{
+ 				background-color: $white-color;
+				border:1px solid $eee;
+				font-size:$f-s-p;
+		
+				&:focus{
+					box-shadow:none;
+					@include shadow();	
+				}
+			}
+			.submit-btn{
+				background-color: $base-color;
+				color:$white-color;
+				border:none;
+				position: absolute;
+    			right: 0;
+    			top: 0;
+    			width: 50px;
+    			border-top-right-radius: 5px;
+    			border-bottom-right-radius: 5px;
+	    		height: calc(1.5em + .75rem + 2px);
+				padding: .375rem .75rem;
+				i{
+					color:$white-color;
+					font-weight: $f-w-400;
+				}
+			}
+		}
+	}
+	
+	&-categories{
+     	ul{
+			.cat-item:not(:last-child){
+				margin-bottom:10px;
+			}
+			a{ 
+				font-weight: $f-w-500;
+				width:100%;
+				&:hover{
+					color:$base-color;
+				}
+			 }
+			.badge-pill{
+				color:$white-color;
+				background-color: $base-color;
+			  	cursor: pointer;
+			  	padding: 4px 10px;
+    		  	border-radius: 30px;
+			
+			  	&:hover{
+					color:$eee;
+			  	}
+			}
+	 	}
+	}
+	&-recent-posts{
+		.post-item{
+			margin-bottom:30px;
+			img{
+				width:80px;
+				height: 80px;
+				margin-right: 15px;
+				border-radius: 5px;
+			}
+		    p{
+				margin-bottom: 0;
+				margin-top:5px;
+				font-size: 14px;
+			}
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+
+	&-tags{
+		li{
+			background-color: $eee;
+			padding:5px 10px;
+			margin-bottom: 5px;
+			border-radius: 5px;
+			text-transform: capitalize;
+			font-size: 14px;
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+}

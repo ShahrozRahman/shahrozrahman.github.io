@@ -1,0 +1,42 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes glow {
+        0%, 100% { filter: drop-shadow(0 0 2px #00ffff); }
+        50% { filter: drop-shadow(0 0 6px #00ffff); }
+      }
+      .glow-text { animation: glow 3s ease-in-out infinite; }
+    </style>
+    <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ff00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- DNA Double Helix -->
+  <g stroke="url(#cyberGradient)" stroke-width="2" fill="none" opacity="0.9">
+    <!-- Left strand -->
+    <path d="M 15 20 Q 18 30 15 40 Q 12 50 15 60 Q 18 70 15 80"/>
+    <!-- Right strand -->
+    <path d="M 113 20 Q 110 30 113 40 Q 116 50 113 60 Q 110 70 113 80"/>
+    <!-- Base pair connectors -->
+    <line x1="15" y1="30" x2="113" y2="30"/>
+    <line x1="15" y1="50" x2="113" y2="50"/>
+    <line x1="15" y1="70" x2="113" y2="70"/>
+  </g>
+  
+  <!-- DNA nucleotide circles -->
+  <g fill="url(#cyberGradient)" opacity="0.7">
+    <circle cx="15" cy="30" r="1.5"/>
+    <circle cx="113" cy="30" r="1.5"/>
+    <circle cx="15" cy="50" r="1.5"/>
+    <circle cx="113" cy="50" r="1.5"/>
+    <circle cx="15" cy="70" r="1.5"/>
+    <circle cx="113" cy="70" r="1.5"/>
+  </g>
+
+  <!-- Big S -->
+  <g class="glow-text">
+    <text x="64" y="95" font-family="Courier New, monospace" font-size="160" font-weight="bold" fill="url(#cyberGradient)" text-anchor="middle">S</text>
+  </g>
+</svg>
