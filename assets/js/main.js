@@ -305,6 +305,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ===================================
+    // Publications Sort
+    // ===================================
+    const publicationsSort = document.getElementById('publications-sort');
+    const publicationsList = document.querySelector('.publications-list');
+
+    if (publicationsSort && publicationsList) {
+        publicationsSort.addEventListener('change', function() {
+            const items = Array.from(publicationsList.querySelectorAll('.publication-item'));
+            const sortBy = this.value;
+
+            items.sort((a, b) => {
+                const yearA = parseInt(a.dataset.year, 10) || 0;
+                const yearB = parseInt(b.dataset.year, 10) || 0;
+                const titleA = (a.dataset.title || '').toLowerCase();
+                const titleB = (b.dataset.title || '').toLowerCase();
+
+                if (sortBy === 'oldest') {
+                    return yearA - yearB;
+                }
+
+                if (sortBy === 'title') {
+                    return titleA.localeCompare(titleB);
+                }
+
+                return yearB - yearA;
+            });
+
+            items.forEach(item => publicationsList.appendChild(item));
+        });
+    }
+
+    // ===================================
     // Back to Top Button
     // ===================================
     const backToTop = document.getElementById('back-to-top');
