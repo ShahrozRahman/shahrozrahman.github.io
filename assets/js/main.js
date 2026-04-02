@@ -235,6 +235,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ===================================
+    // Nav Link Text Distortion Effect
+    // ===================================
+    navLinks.forEach(link => {
+        const originalText = link.textContent.trim();
+
+        link.addEventListener('mouseenter', function() {
+            if (this.dataset.glitching === 'true') return;
+
+            let iterations = 0;
+            this.dataset.glitching = 'true';
+
+            const glitchInterval = setInterval(() => {
+                this.textContent = originalText
+                    .split('')
+                    .map((char, index) => {
+                        if (char === ' ') return ' ';
+                        if (index < iterations) {
+                            return originalText[index];
+                        }
+                        return matrixChars[Math.floor(Math.random() * matrixChars.length)];
+                    })
+                    .join('');
+
+                if (iterations >= originalText.length) {
+                    clearInterval(glitchInterval);
+                    this.textContent = originalText;
+                    this.dataset.glitching = 'false';
+                }
+
+                iterations += 0.6;
+            }, 28);
+        });
+
+        link.addEventListener('mouseleave', function() {
+            this.textContent = originalText;
+            this.dataset.glitching = 'false';
+        });
+    });
+
+    // ===================================
     // Scroll Animations (Intersection Observer)
     // ===================================
     const fadeElements = document.querySelectorAll('.fade-in');
