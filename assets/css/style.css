@@ -2457,3 +2457,24 @@ img {
     font-size: var(--font-size-xs);
   }
 }
+
+/* CV additions retain the existing neon palette and card treatment. */
+.skip-link { position: fixed; top: -100px; left: 1rem; z-index: 10001; padding: .8rem 1rem; background: var(--bg-primary); color: var(--neon-cyan); border: 2px solid currentColor; }
+.skip-link:focus { top: 1rem; }
+:focus-visible { outline: 2px solid var(--neon-cyan); outline-offset: 5px; }
+section[id], #main-content { scroll-margin-top: 100px; }
+.training-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-lg); }
+.training-grid .timeline-item { margin: 0; }
+.project-card { padding: var(--spacing-xl); display: flex; flex-direction: column; gap: var(--spacing-sm); }
+.project-card h3 { color: var(--neon-cyan); font-size: var(--font-size-lg); overflow-wrap: anywhere; }
+.project-kind { color: var(--text-secondary); font-size: var(--font-size-sm); }
+.project-card p { color: var(--text-secondary); line-height: 1.8; }
+.project-card .publication-link { margin-top: auto; }
+.info-item strong, .contact-details a { overflow-wrap: anywhere; }
+.work-item:focus-within .work-overlay { opacity: 1; }
+@media (max-width: 768px) { .training-grid { grid-template-columns: 1fr; } .project-card { padding: var(--spacing-lg); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  #matrix-canvas, .scan-line, .typewriter-cursor { display: none; }
+  .fade-in, [class*="animate-fade"] { opacity: 1; transform: none; }
+}

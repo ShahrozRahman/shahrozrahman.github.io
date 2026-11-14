@@ -5,6 +5,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
     // ===================================
     // Matrix Rain Background
@@ -64,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Animate matrix
-    setInterval(drawMatrix, 50);
+    if (!reducedMotion) setInterval(drawMatrix, 50);
 
     // ===================================
     // Navigation
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLogo = document.querySelector('.nav-logo');
 
     // Logo glitch effect on load
-    if (navLogo) {
+    if (navLogo && !reducedMotion) {
         const originalLogo = navLogo.textContent;
         const glitchChars = '!<>-_\\/[]{}—=+*^?#________';
         let glitchCount = 0;
@@ -109,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navToggle.addEventListener('click', function() {
             this.classList.toggle('active');
             navMenu.classList.toggle('active');
+            this.setAttribute('aria-expanded', String(navMenu.classList.contains('active')));
         });
     }
 
@@ -118,8 +121,24 @@ document.addEventListener('DOMContentLoaded', function() {
             if (navToggle) {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             }
         });
+    });
+
+    function closeNavigation() {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+            closeNavigation();
+            navToggle.focus();
+        }
+    });
+    document.addEventListener('click', event => {
+        if (!navbar.contains(event.target)) closeNavigation();
     });
 
     // Navbar scroll effect
@@ -159,11 +178,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===================================
     const typewriter = document.getElementById('typewriter');
     const words = [
-        'Professional Bioinformatician.',
-        'Genomics Consultant.',
+        'Bioinformatics Researcher.',
+        'Computational Biologist.',
         'Pipeline Developer.',
-        'Data Analysis Expert.',
-        'Bioinformatics Service Provider.'
+        'Biological Data Scientist.'
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -196,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Start typewriter
-    if (typewriter) {
+    if (typewriter && !reducedMotion) {
         setTimeout(type, 1000);
     }
 
@@ -209,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const originalText = title.textContent.replace('_', '');
 
         title.addEventListener('mouseenter', function() {
+            if (reducedMotion) return;
             let iterations = 0;
             const maxIterations = 10;
 
@@ -241,6 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const originalText = link.textContent.trim();
 
         link.addEventListener('mouseenter', function() {
+            if (reducedMotion) return;
             if (this.dataset.glitching === 'true') return;
 
             let iterations = 0;
@@ -302,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cyberCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
+            if (reducedMotion) return;
             // Random glitch effect on hover
             if (Math.random() > 0.7) {
                 this.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 4 - 2}px)`;
@@ -351,9 +372,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const publicationsList = document.querySelector('.publications-list');
 
     if (publicationsSort && publicationsList) {
-        publicationsSort.addEventListener('change', function() {
+        const sortPublications = function() {
             const items = Array.from(publicationsList.querySelectorAll('.publication-item'));
-            const sortBy = this.value;
+            const sortBy = publicationsSort.value;
 
             items.sort((a, b) => {
                 const yearA = parseInt(a.dataset.year, 10) || 0;
@@ -373,7 +394,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             items.forEach(item => publicationsList.appendChild(item));
-        });
+        };
+        publicationsSort.addEventListener('change', sortPublications);
+        sortPublications();
     }
 
     // ===================================
@@ -395,16 +418,17 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.getElementById(this.getAttribute('href').slice(1));
 
             if (target) {
+                if (this.classList.contains('skip-link')) target.focus({ preventScroll: true });
                 const headerOffset = 80;
                 const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: 'smooth'
+                    behavior: reducedMotion ? 'auto' : 'smooth'
                 });
             }
         });
@@ -440,7 +464,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===================================
     const heroShapes = document.querySelectorAll('.hero-shape');
 
-    if (heroShapes.length > 0) {
+    if (heroShapes.length > 0 && !reducedMotion) {
         window.addEventListener('mousemove', function(e) {
             const mouseX = e.clientX / window.innerWidth;
             const mouseY = e.clientY / window.innerHeight;
@@ -462,11 +486,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let statsAnimated = false;
 
     function animateStats() {
-        if (statsAnimated) return;
+        if (statsAnimated || reducedMotion) return;
 
         statCards.forEach(stat => {
             const target = stat.textContent;
-            const isNumber = /^\d+/.test(target);
+            const isNumber = /^\d+\+?$/.test(target);
 
             if (isNumber) {
                 const num = parseInt(target);
@@ -531,7 +555,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Trigger random glitch every 10-15 seconds
-    setInterval(randomGlitch, Math.random() * 5000 + 10000);
+    if (!reducedMotion) setInterval(randomGlitch, Math.random() * 5000 + 10000);
 
     // ===================================
     // Cursor Trail Effect (Cyber Glow)
